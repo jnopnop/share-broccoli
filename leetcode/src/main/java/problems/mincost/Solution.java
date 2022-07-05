@@ -79,12 +79,9 @@ public class Solution {
             if (rank.get(rootX) > rank.get(rootY)) {
                 root.put(rootY, rootX);
                 rank.put(rootX, totalRank);
-            } else if (rank.get(rootX) < rank.get(rootY)) {
+            } else {
                 root.put(rootX, rootY);
                 rank.put(rootY, totalRank);
-            } else {
-                root.put(rootY, rootX);
-                rank.put(rootX, totalRank);
             }
             componentsCount--;
             return true;
