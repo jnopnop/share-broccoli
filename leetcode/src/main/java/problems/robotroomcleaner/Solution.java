@@ -131,4 +131,14 @@ class Solution {
             throw new IllegalStateException();
         }
     }
+
+    private interface Robot {
+        void turnRight();
+
+        void clean();
+
+        boolean move();
+
+        void turnLeft();
+    }
 }
