@@ -1,0 +1,14 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+  sql:
+    init:
+      mode: always
+      schema-locations: ddl.sql
+      data-locations: dml.sql
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/sandbox_db
+    username: sandbox_user
+    password: sandbox_password
