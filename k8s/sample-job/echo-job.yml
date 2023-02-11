@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: echo-job
+spec:
+  completions: 5
+  parallelism: 5
+  template:
+    spec:
+      restartPolicy: OnFailure
+      containers:
+        - name: echo
+          image: busybox
+          command: ["echo", "Running in a job"]
